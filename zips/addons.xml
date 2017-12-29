@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.video.entire" name="Entire Fork" version="1.00" provider-name="Apoc">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="plugin.video.youtube" version="5.2.1" optional="true" />
+		<import addon="repository.apoc" version="1.0.0" />
+		<import addon="script.entire.metadata" version="1.0.0" />
+		<import addon="script.module.urlresolver" version="3.0.0"/>
+		<import addon="script.module.liveresolver" version="0.1.24"/>
+		<import addon="script.video.F4mProxy" version="2.2.3"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Entire</summary>
+		<description lang="en">Great Streaming! Support From [COLOR lightblue]tvaddons.ag[/COLOR].</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.entire.metadata" version="1.0.0" name="Entire Metadata" provider-name="Apoc">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Entire Addon</summary>
+		<description>Metadata for Entire are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
+<addon id="repository.apoc" name="Apoc" version="0.0.1" provider-name="Apoc">
+	<extension point="xbmc.addon.repository" name="Apoc's Repo">
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/</datadir>
+		</dir>
+		<info compressed="false">https://raw.githubusercontent.com/ApocDZN/repository.apoc/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/ApocDZN/repository.apoc/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/ApocDZN/repository.apoc/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Apoc's Repo</summary>
+		<description lang="en">Apoc's Repo</description>
+		<genre></genre>
+	</extension>
+</addon>
+</addons>
